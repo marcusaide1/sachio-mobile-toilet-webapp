@@ -2,8 +2,21 @@
 import React from 'react';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { PRODUCT_CATEGORIES } from '../data/websiteData';
+import toiletImage1 from '../../assets/recirculating-mobile-toilet-1.jpg';
+import toiletImage2 from '../../assets/recirculating-mobile-toilet-2.jpg';
+import toiletImage3 from '../../assets/recirculating-mobile-toilet-3.jpg';
+import toiletImage4 from '../../assets/recirculating-mobile-toilet-4.jpg';
+import toiletImage5 from '../../assets/recirculating-mobile-toilet-5.jpg';
 
 export default function ProductCategories({ onSelectCategory, onOpenQuoteModal }) {
+  const toiletImages = [
+    toiletImage1,
+    toiletImage2,
+    toiletImage3,
+    toiletImage4,
+    toiletImage5
+  ];
+
   return (
     <section id="categories-section" className="py-16 md:py-24 bg-[#f7f7f7] relative">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
@@ -87,6 +100,68 @@ export default function ProductCategories({ onSelectCategory, onOpenQuoteModal }
             Book Mobile Toilets
           </button>
         </div>
+
+        <article className="mt-10 bg-white border border-gray-200 shadow-sm overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="grid grid-cols-2 gap-2 p-3 sm:p-4 bg-gray-50">
+              {toiletImages.map((image, index) => (
+                <div
+                  key={image}
+                  className={`${index === 0 ? 'col-span-2' : ''} min-h-[180px] sm:min-h-[220px] lg:min-h-[260px] bg-white border border-gray-200 overflow-hidden`}
+                >
+                  <img
+                    src={image}
+                    alt={`Recirculating Mobile Toilet view ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+              <span className="text-[#7ed956] text-xs font-din font-bold uppercase tracking-widest mb-3">
+                Mobile Toilets
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-din font-bold text-[#002245] uppercase mb-5">
+                Recirculating Mobile Toilet
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
+                Introducing our Executive Recirculating Flushing Toilet with Internal Holding Tank, the ultimate solution for events! Designed for convenience and efficiency, this mobile toilet utilizes chemicals instead of water, making it perfect for any occasion. Say goodbye to traditional plumbing issues and hello to hassle-free sanitation. Whether it is a wedding, concert, or outdoor festival, ensure your guests have access to premium facilities. Upgrade to our mobile toilet today and elevate your event experience!
+              </p>
+
+              <div className="text-sm mb-6">
+                <span className="font-bold text-[#002245]">Category:</span>{' '}
+                <button
+                  type="button"
+                  onClick={() => onSelectCategory('Portable Bathroom')}
+                  className="text-[#7ed956] hover:text-[#002245] underline"
+                >
+                  Mobile Toilets
+                </button>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-7">
+                {['Event toilet', 'Portable Toilets', 'Potty', 'Recirculating mobile toilet'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="border border-gray-300 bg-[#f7f7f7] px-3 py-1.5 text-xs text-gray-600"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => onOpenQuoteModal('Recirculating Mobile Toilet')}
+                className="w-full sm:w-auto bg-[#002245] hover:bg-[#7ed956] text-white hover:text-[#002245] px-7 py-3.5 font-din font-bold uppercase text-sm tracking-wider transition-colors"
+              >
+                Book This Toilet
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   );
