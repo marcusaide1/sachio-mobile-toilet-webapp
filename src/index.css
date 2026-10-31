@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #ffffff;
+  }
+  
+  h1, h2, h3, h4, .font-din {
+    font-family: 'Oswald', 'Barlow Condensed', 'DIN', sans-serif;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #e8e8e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #999999;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #002245;
+}
+
+/* Diagonal polygon cuts matching the reference Topindus site */
+.clip-polygon-logo {
+  clip-path: polygon(12% 0%, 100% 0, 88% 100%, 0% 100%);
+}
+
+.clip-polygon-btn {
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+}
+
+.clip-polygon-banner-badge {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+/* Pulsing animated circles for Floating Message widget */
+@keyframes scaleToggleOne {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes scaleToggleTwo {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  60% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes scaleToggleThree {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  75% { transform: scale(3.2); opacity: 0; }
+}
+
+.animate-pulse-circle-1 {
+  animation: scaleToggleOne 2.2s cubic-bezier(.25, .46, .45, .94) infinite;
+}
+
+.animate-pulse-circle-2 {
+  animation: scaleToggleTwo 2.6s cubic-bezier(.25, .46, .45, .94) infinite 0.4s;
+}
+
+.animate-pulse-circle-3 {
+  animation: scaleToggleThree 3.0s cubic-bezier(.25, .46, .45, .94) infinite 0.8s;
+}
+
+/* Scroll button animation */
+@keyframes sliderScrollButton {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(-50%, 10px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, 10px, 0);
+  }
+}
+
+.animate-scroll-prompt {
+  animation: sliderScrollButton 2s infinite ease-in-out;
+}
+
+/* Sachio Express More Button 45-degree angled slide transition */
+.btn-topindus-more,
+.btn-sachio-more {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #002245;
+  color: #ffffff;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.btn-topindus-more::before,
+.btn-sachio-more::before {
+  content: '';
+  position: absolute;
+  right: -15%;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: skewX(-25deg);
+  transition: all 0.4s cubic-bezier(.785, .135, .15, .86);
+  z-index: -1;
+}
+
+.btn-topindus-more:hover::before,
+.btn-sachio-more:hover::before {
+  width: 130%;
+  right: -15%;
+  background-color: #7ed956;
+}
+
+.btn-topindus-more:hover,
+.btn-sachio-more:hover {
+  background-color: #0d2d4e;
+}
+
+/* Text clipping image for "15 YEARS" */
+.text-image-clip {
+  background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

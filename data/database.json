@@ -1,0 +1,28 @@
+{
+  "inquiries": [
+    {
+      "id": 1793400451412,
+      "email": "test@partner.com",
+      "phone": "+1 555-0123",
+      "message": "Need quote for 10 units of 20ft container houses",
+      "source": "Quick Quote Modal",
+      "createdAt": "2026-10-30T22:47:31.412Z"
+    },
+    {
+      "id": 1793400188790,
+      "email": "client@example.com",
+      "phone": "+1 555-0199",
+      "message": "Requesting price on 40ft expandable container house with shipment to Los Angeles port.",
+      "source": "Quick Quote Modal",
+      "createdAt": "2026-10-30T22:43:08.790Z"
+    }
+  ],
+  "newsletter": [
+    {
+      "id": 1793400208300,
+      "email": "subscriber@globaltrade.org",
+      "createdAt": "2026-10-30T22:43:28.300Z"
+    }
+  ],
+  "contacts": []
+}

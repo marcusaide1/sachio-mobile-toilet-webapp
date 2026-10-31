@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog - TOPINDUS</title>
+  <meta name="description" content="Browse all TOPINDUS portable toilets, container houses, hand wash sinks, and chemical cleansers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-announcement-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="app-badge-pill">
+          <span class="app-star-icon">★</span>
+          <span>Shop on the TOPINDUS App • Free on Google Play</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:08187692998" class="hotline-highlight">
+          <span>📞 CALL TO ORDER: 08187692998</span>
+        </a>
+        <button id="currency-toggle-btn" class="currency-toggle-btn">
+          <span id="currency-label">₦ NGN</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main-row">
+        <button class="mobile-menu-btn" id="menu-toggle-btn">☰</button>
+
+        <a href="index.html" class="brand-wrapper">
+          <div class="brand-icon">S</div>
+          <div class="brand-text-block">
+            <div class="brand-title">TOPINDUS <span>Express</span></div>
+            <div class="brand-subtitle">Portable Toilets & Cabins</div>
+          </div>
+        </a>
+
+        <div class="header-search-bar">
+          <div class="search-input-wrapper">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search products by model, capacity or category..."
+            >
+            <button class="search-clear-btn" id="search-clear-btn">✕</button>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="quote.html" class="hero-slide-action" style="padding:8px 16px; font-size:12.5px; text-decoration:none;">
+            Request Quote
+          </a>
+          <button class="header-icon-btn" id="cart-icon-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count-badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="site-nav-bar">
+    <div class="container">
+      <ul class="nav-links-list">
+        <li class="nav-link-item"><a href="index.html">Home</a></li>
+        <li class="nav-link-item active"><a href="products.html">All Products Directory</a></li>
+        <li class="nav-link-item highlight-deal"><a href="#" onclick="filterByDeals()">⚡ Mega Deals</a></li>
+        <li class="nav-link-item"><a href="#" onclick="filterByCategory('Mobile Toilets')">Mobile Toilets</a></li>
+        <li class="nav-link-item"><a href="#" onclick="filterByCategory('Real Estate')">Container Houses</a></li>
+        <li class="nav-link-item"><a href="#" onclick="filterByCategory('Sanitation')">Sanitation</a></li>
+        <li class="nav-link-item"><a href="projects.html">Projects</a></li>
+        <li class="nav-link-item"><a href="quote.html">Quote Calculator</a></li>
+        <li class="nav-link-item"><a href="about.html">About Us</a></li>
+        <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="main-page-wrapper">
+    <div class="container">
+      <nav class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Product Directory</span>
+      </nav>
+
+      <section class="internal-page-header">
+        <h1>All Products & Equipment Catalog</h1>
+        <p>Explore our complete manufacturing portfolio of portable sanitation cabins, expandable container villas, and chemical cleaning supplies.</p>
+      </section>
+
+      <!-- Category Filter Pills -->
+      <section class="category-filter-strip" id="category-tabs">
+        <button class="category-tab-btn active" data-category="All">All Products (20)</button>
+        <button class="category-tab-btn" data-category="Deals">🔥 Mega Deals</button>
+        <button class="category-tab-btn" data-category="Mobile Toilets">Mobile Toilets</button>
+        <button class="category-tab-btn" data-category="Real Estate">Container Houses</button>
+        <button class="category-tab-btn" data-category="Sanitation">Sanitation & Cleaners</button>
+        <button class="category-tab-btn" data-category="Restroom Trailers">Restroom Trailers</button>
+        <button class="category-tab-btn" data-category="Cooler Boxes">Cooler Boxes</button>
+        <button class="category-tab-btn" data-category="Outdoor Tents">Glamping Tents</button>
+      </section>
+
+      <!-- Results Summary & Sorting -->
+      <div class="filter-summary-row">
+        <span class="items-found-label" id="items-found-label">Loading products...</span>
+        <div class="sort-select-wrapper">
+          <select id="sort-select" class="sort-select">
+            <option value="newest">Newest arrivals</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="discount">Highest Discount</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <section class="products-grid" id="products-grid"></section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <div class="brand-icon" style="width:32px; height:32px; font-size:18px;">S</div>
+            <span style="font-size:18px; font-weight:800; color:#fff;">TOPINDUS</span>
+          </div>
+          <p>Global suppliers of durable portable restrooms, expandable container houses, and sanitation chemical supplies.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="quote.html">Quote Calculator</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hotline</h4>
+          <p>📞 Call to Order: <a href="tel:08187692998" style="color:#fbbf24; font-weight:700;">08187692998</a></p>
+          <p>💬 WhatsApp: <a href="https://wa.me/2348187692998" target="_blank" style="color:#38bdf8;">+234 818 769 2998</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Operations</h4>
+          <p>TOPINDUS Global Operations<br>Exporting to 85+ countries.</p>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <div>© 2026 TOPINDUS. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close-btn">✕</button>
+      <img src="" alt="" class="modal-product-img" id="modal-img">
+      <div class="modal-body">
+        <div class="product-subtitle" id="modal-subtitle"></div>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <div class="modal-price-box">
+          <div>
+            <div style="font-size:11px; color:#64748b; font-weight:600;">SPECIAL PRICE</div>
+            <div class="modal-price-current" id="modal-price"></div>
+          </div>
+          <div id="modal-discount-tag" class="product-badge"></div>
+        </div>
+        <p class="modal-desc" id="modal-desc"></p>
+        <h4 class="specs-title">Technical Specifications</h4>
+        <table class="specs-table" id="modal-specs-table"></table>
+        <div class="modal-buttons-row">
+          <button class="btn-checkout" id="modal-add-cart-btn" style="background:#103674;">🛒 Add to Cart</button>
+          <a href="#" class="btn-whatsapp-inquiry" id="modal-whatsapp-btn" target="_blank">💬 Inquire on WhatsApp</a>
+          <a href="tel:08187692998" class="btn-call-inquiry">📞 Call to Order: 08187692998</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">Shopping Cart (<span id="cart-drawer-count">0</span>)</div>
+      <button class="modal-close-btn" id="cart-close-btn" style="position:static;">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span class="cart-subtotal-label">Subtotal</span>
+        <span class="cart-subtotal-val" id="cart-subtotal-val">₦0</span>
+      </div>
+      <button class="btn-checkout" id="checkout-whatsapp-btn">Proceed to Order (WhatsApp) →</button>
+    </div>
+  </div>
+
+  <!-- Mobile Sidebar Drawer -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="sidebar-drawer" id="sidebar-drawer">
+    <div class="sidebar-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="brand-icon">S</div>
+        <span style="font-weight:800; font-size:16px;">TOPINDUS</span>
+      </div>
+      <button class="modal-close-btn" id="sidebar-close-btn" style="background:rgba(255,255,255,0.1); color:#fff; position:static;">✕</button>
+    </div>
+    <ul class="sidebar-menu-list">
+      <li class="sidebar-menu-item"><a href="index.html">🏠 Home Page</a></li>
+      <li class="sidebar-menu-item active"><a href="products.html">📦 All Products Directory</a></li>
+      <li class="sidebar-menu-item"><a href="projects.html">🏗️ Engineering Projects</a></li>
+      <li class="sidebar-menu-item"><a href="quote.html">⚡ Instant Quote Calculator</a></li>
+      <li class="sidebar-menu-item"><a href="about.html">🏢 About Us</a></li>
+      <li class="sidebar-menu-item"><a href="contact.html">📞 Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="toast-notice" id="toast-notice">Item added to cart!</div>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

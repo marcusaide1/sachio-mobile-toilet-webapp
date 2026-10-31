@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Quote Calculator - TOPINDUS</title>
+  <meta name="description" content="Configure custom portable toilets, modular container houses, and sanitation units with instant factory pricing estimates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-announcement-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="app-badge-pill">
+          <span class="app-star-icon">★</span>
+          <span>Shop on the TOPINDUS App • Free on Google Play</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:08187692998" class="hotline-highlight">
+          <span>📞 CALL TO ORDER: 08187692998</span>
+        </a>
+        <button id="currency-toggle-btn" class="currency-toggle-btn">
+          <span id="currency-label">₦ NGN</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main-row">
+        <button class="mobile-menu-btn" id="menu-toggle-btn">☰</button>
+
+        <a href="index.html" class="brand-wrapper">
+          <div class="brand-icon">S</div>
+          <div class="brand-text-block">
+            <div class="brand-title">TOPINDUS <span>Express</span></div>
+            <div class="brand-subtitle">Portable Toilets & Cabins</div>
+          </div>
+        </a>
+
+        <div class="header-actions" style="margin-left:auto;">
+          <a href="quote.html" class="hero-slide-action" style="padding:8px 16px; font-size:12.5px; text-decoration:none;">
+            Request Quote
+          </a>
+          <button class="header-icon-btn" id="cart-icon-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count-badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="site-nav-bar">
+    <div class="container">
+      <ul class="nav-links-list">
+        <li class="nav-link-item"><a href="index.html">Home</a></li>
+        <li class="nav-link-item"><a href="products.html">All Products Directory</a></li>
+        <li class="nav-link-item"><a href="projects.html">Projects</a></li>
+        <li class="nav-link-item active"><a href="quote.html">Quote Calculator</a></li>
+        <li class="nav-link-item"><a href="about.html">About Us</a></li>
+        <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="main-page-wrapper">
+    <div class="container">
+      <nav class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Instant Quote Calculator</span>
+      </nav>
+
+      <section class="internal-page-header">
+        <h1>Custom Quotation & Configuration Builder</h1>
+        <p>Customize your portable restroom or modular container order and calculate an instant cost estimate with wholesale contractor discounts.</p>
+      </section>
+
+      <div style="max-width:800px; margin:0 auto;">
+        <div class="content-card">
+          <h2 class="content-card-title">⚙️ Select Configuration & Specifications</h2>
+
+          <!-- Product Category -->
+          <div class="form-group">
+            <label class="form-label" for="quote-product-type">Select Product Model</label>
+            <select id="quote-product-type" class="form-control-select">
+              <option value="480000" data-usd="380" data-name="Portable Construction Site Toilet">Portable Construction Site Toilet (HDPE Single)</option>
+              <option value="1150000" data-usd="920" data-name="ADA Wheelchair Accessible Toilet">ADA Wheelchair Accessible Barrier-Free Toilet</option>
+              <option value="240000" data-usd="190" data-name="Double User Foot Pump Hand Wash Station">Double User Hand Wash Sink (80L)</option>
+              <option value="9800000" data-usd="7800" data-name="20ft Expandable Modular Container House">20ft Expandable Modular Container House (2-Bed Luxury)</option>
+              <option value="18500000" data-usd="14800" data-name="Futuristic Space Capsule House">Futuristic Space Capsule Glamping Pod (Smart Home)</option>
+              <option value="8200000" data-usd="6500" data-name="Modern Apple Cabin Studio Pod">Apple Cabin Studio Pod (Full Glass Wall)</option>
+              <option value="14500000" data-usd="11500" data-name="Luxury VIP Mobile Restroom Trailer (4-Suite)">Luxury VIP Restroom Trailer (4-Station Suite)</option>
+              <option value="1800000" data-usd="1450" data-name="Security Sentry Guard Booth">Outdoor Security Sentry Guard Booth</option>
+              <option value="2500" data-usd="2" data-name="TOPINDUS Toilet Cleaner 1L">TOPINDUS Toilet Cleaner (10x Royal Clean)</option>
+            </select>
+          </div>
+
+          <!-- Quantity -->
+          <div class="form-group">
+            <label class="form-label" for="quote-quantity">Quantity Needed</label>
+            <select id="quote-quantity" class="form-control-select">
+              <option value="1">1 Unit (Standard Retail)</option>
+              <option value="3">3 Units</option>
+              <option value="5">5 Units (5% Bulk Discount)</option>
+              <option value="10">10 Units (10% Bulk Discount)</option>
+              <option value="25">25 Units (15% Contractor Fleet Discount)</option>
+              <option value="50">50+ Units (20% Factory Wholesale)</option>
+            </select>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="form-group">
+            <label class="form-label">Optional Add-ons & Equipment</label>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#334155; margin-top:8px;">
+              <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                <input type="checkbox" id="addon-solar" value="75000" data-usd="60">
+                <span>Solar-assisted LED Lighting (+₦75,000 / $60)</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                <input type="checkbox" id="addon-flush" value="95000" data-usd="75">
+                <span>Hands-Free Hygienic Foot-Pump Flush (+₦95,000 / $75)</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                <input type="checkbox" id="addon-climate" value="280000" data-usd="220">
+                <span>Silent Climate Control AC / Ventilation (+₦280,000 / $220)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Destination -->
+          <div class="form-group">
+            <label class="form-label" for="quote-destination">Destination / Delivery Region</label>
+            <select id="quote-destination" class="form-control-select">
+              <option value="Lagos, Nigeria (Door Delivery / Pickup)">Lagos, Nigeria (Immediate Local Stock)</option>
+              <option value="Abuja & Northern Nigeria">Abuja / Northern States (Road Haulage)</option>
+              <option value="Port Harcourt & South-South">Port Harcourt / Niger Delta</option>
+              <option value="West Africa (Ghana, Benin, Ivory Coast)">West Africa (Cross-Border Transit)</option>
+              <option value="International CIF Ocean Freight">International Sea Port (CIF / FOB)</option>
+            </select>
+          </div>
+
+          <!-- Instant Estimate Result Display -->
+          <div class="quote-calc-result" style="padding:22px; margin:20px 0;">
+            <div style="font-size:12px; font-weight:700; color:#15803d; text-transform:uppercase; letter-spacing:0.5px;">Estimated Total Order Value</div>
+            <div class="quote-est-price" id="quote-calc-total" style="font-size:32px;">₦480,000</div>
+            <div style="font-size:12px; color:#166534;" id="quote-calc-discount-label">Standard Wholesale Factory Price</div>
+          </div>
+
+          <!-- WhatsApp Direct Submit Button -->
+          <button class="btn-whatsapp-inquiry" id="quote-whatsapp-submit" style="width:100%; padding:14px; font-size:15px; margin-bottom:12px;">
+            <span>💬 Send Configured Quote to WhatsApp for Instant Approval</span>
+          </button>
+          
+          <a href="tel:08187692998" class="btn-call-inquiry" style="width:100%; padding:14px; font-size:15px;">
+            <span>📞 Call Sales Hotline: 08187692998</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <div class="brand-icon" style="width:32px; height:32px; font-size:18px;">S</div>
+            <span style="font-size:18px; font-weight:800; color:#fff;">TOPINDUS</span>
+          </div>
+          <p>Global suppliers of durable portable restrooms, expandable container houses, and sanitation chemical supplies.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="quote.html">Quote Calculator</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hotline</h4>
+          <p>📞 Call: <a href="tel:08187692998" style="color:#fbbf24; font-weight:700;">08187692998</a></p>
+          <p>💬 WhatsApp: <a href="https://wa.me/2348187692998" target="_blank" style="color:#38bdf8;">+234 818 769 2998</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Operations</h4>
+          <p>TOPINDUS Global Operations<br>Exporting to 85+ countries.</p>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <div>© 2026 TOPINDUS. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function updateCalculator() {
+      const prodSelect = document.getElementById('quote-product-type');
+      const qtySelect = document.getElementById('quote-quantity');
+      const addonSolar = document.getElementById('addon-solar');
+      const addonFlush = document.getElementById('addon-flush');
+      const addonClimate = document.getElementById('addon-climate');
+      const totalDisplay = document.getElementById('quote-calc-total');
+      const discountLabel = document.getElementById('quote-calc-discount-label');
+
+      const isUSD = (localStorage.getItem('sachio_currency') === 'USD');
+      const baseNGN = Number(prodSelect.value);
+      const baseUSD = Number(prodSelect.selectedOptions[0].dataset.usd);
+      const qty = Number(qtySelect.value);
+
+      let discountRate = 0;
+      if (qty >= 50) discountRate = 0.20;
+      else if (qty >= 25) discountRate = 0.15;
+      else if (qty >= 10) discountRate = 0.10;
+      else if (qty >= 5) discountRate = 0.05;
+
+      let addonsNGN = 0;
+      let addonsUSD = 0;
+      if (addonSolar.checked) { addonsNGN += Number(addonSolar.value); addonsUSD += Number(addonSolar.dataset.usd); }
+      if (addonFlush.checked) { addonsNGN += Number(addonFlush.value); addonsUSD += Number(addonFlush.dataset.usd); }
+      if (addonClimate.checked) { addonsNGN += Number(addonClimate.value); addonsUSD += Number(addonClimate.dataset.usd); }
+
+      const totalNGN = ((baseNGN + addonsNGN) * qty) * (1 - discountRate);
+      const totalUSD = ((baseUSD + addonsUSD) * qty) * (1 - discountRate);
+
+      if (isUSD) {
+        totalDisplay.textContent = '$' + Math.round(totalUSD).toLocaleString('en-US');
+      } else {
+        totalDisplay.textContent = '₦' + Math.round(totalNGN).toLocaleString('en-US');
+      }
+
+      if (discountRate > 0) {
+        discountLabel.textContent = `Includes ${(discountRate * 100)}% Volume Fleet Discount!`;
+      } else {
+        discountLabel.textContent = 'Standard Factory Direct Wholesale Pricing';
+      }
+    }
+
+    document.querySelectorAll('#quote-product-type, #quote-quantity, #addon-solar, #addon-flush, #addon-climate').forEach(el => {
+      el.addEventListener('change', updateCalculator);
+    });
+
+    document.getElementById('quote-whatsapp-submit').addEventListener('click', () => {
+      const prodSelect = document.getElementById('quote-product-type');
+      const prodName = prodSelect.selectedOptions[0].dataset.name;
+      const qty = document.getElementById('quote-quantity').value;
+      const dest = document.getElementById('quote-destination').value;
+      const total = document.getElementById('quote-calc-total').textContent;
+
+      const addons = [];
+      if (document.getElementById('addon-solar').checked) addons.push('Solar LED Lighting');
+      if (document.getElementById('addon-flush').checked) addons.push('Foot-pump Flush');
+      if (document.getElementById('addon-climate').checked) addons.push('Climate Control AC');
+
+      const addonText = addons.length > 0 ? addons.join(', ') : 'Standard Configuration';
+
+      const msg = `Hello TOPINDUS,%0A%0A*Request for Quotation:*%0A• Item: ${prodName}%0A• Quantity: ${qty} Unit(s)%0A• Add-ons: ${addonText}%0A• Delivery Region: ${dest}%0A• Estimated Value: ${total}%0A%0APlease provide your official proforma invoice and lead time.`;
+      window.open(`https://wa.me/2348187692998?text=${msg}`, '_blank');
+    });
+
+    updateCalculator();
+  </script>
+</body>
+</html>
