@@ -4,7 +4,7 @@
 export const COMPANY_INFO = {
   name: "Sachio Express",
   shortName: "Sachio Express",
-  logo: "/assets/sachio-logo.jpg",
+  logo: "./assets/sachio-logo.jpg",
   slogan: "Professional Portable Products Manufacturer",
   description: "Sachio Express has been successfully creating and distributing innovative, high quality portable container houses, portable toilets, tents, cooler boxes etc around the world for over 15 years.",
   address: "Ikota shopping complex, Ajah, Lagos",
