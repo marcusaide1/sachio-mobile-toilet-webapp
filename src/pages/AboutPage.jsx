@@ -16,7 +16,7 @@ import { COMPANY_INFO, KEY_METRICS } from '../data/websiteData';
 
 export default function AboutPage({ onOpenQuoteModal }) {
   return (
-    <div className="pt-24 md:pt-28 pb-20 bg-white">
+    <div className="pt-[64px] md:pt-[144px] pb-20 bg-white">
       {/* Banner */}
       <div className="bg-[#002245] text-white py-14 mb-12">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">

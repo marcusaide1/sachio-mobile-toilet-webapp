@@ -14,7 +14,7 @@ export default function HomePage({
   onNavigateToShowcase 
 }) {
   return (
-    <div className="pt-16 md:pt-20">
+    <div className="pt-[64px] md:pt-[144px]">
       {/* 1. Hero Banner Slider */}
       <HeroSlider
         onNavigateToCategory={onSelectCategory}

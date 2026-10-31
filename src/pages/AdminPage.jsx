@@ -42,7 +42,7 @@ export default function AdminPage() {
   }, []);
 
   return (
-    <div className="pt-24 md:pt-28 pb-20 bg-[#f8f9fa] min-h-screen">
+    <div className="pt-[64px] md:pt-[144px] pb-20 bg-[#f8f9fa] min-h-screen">
       {/* Banner */}
       <div className="bg-[#002245] text-white py-10 mb-8">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4">

@@ -5,7 +5,7 @@ import { SHOWCASE_PROJECTS } from '../data/websiteData';
 
 export default function NewsPage({ onOpenQuoteModal }) {
   return (
-    <div className="pt-24 md:pt-28 pb-20 bg-[#f8f9fa]">
+    <div className="pt-[64px] md:pt-[144px] pb-20 bg-[#f8f9fa]">
       <div className="bg-[#002245] text-white py-14 mb-12">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
           <div className="text-xs font-din text-[#7ed956] uppercase tracking-widest mb-1">

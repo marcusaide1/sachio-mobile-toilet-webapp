@@ -81,14 +81,14 @@ export default function Header({
             <h3 className="text-xl font-din text-[#002245] uppercase mb-4 tracking-wide">
               What Are You Looking For?
             </h3>
-            <form onSubmit={handleSearchSubmit} className="flex items-center gap-2">
+            <form onSubmit={handleSearchSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               <input
                 type="text"
                 placeholder="Search prefabricated houses, container cabins, mobile toilets, tents..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 autoFocus
-                className="flex-1 bg-[#f7f7f7] border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#7ed956] transition"
+                className="w-full sm:flex-1 bg-[#f7f7f7] border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#7ed956] transition"
               />
               <button 
                 type="submit" 
@@ -110,7 +110,7 @@ export default function Header({
       )}
 
       {/* Top Header Row (Disappears on compact scroll for sleek look) */}
-      <div className={`bg-[#0d2d4e] border-b border-white/10 transition-all duration-300 ${isScrolled ? 'hidden md:hidden' : 'block'}`}>
+      <div className={`bg-[#0d2d4e] border-b border-white/10 transition-all duration-300 ${isScrolled ? 'hidden' : 'hidden md:block'}`}>
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-14 md:h-16">
             {/* Left: Brand Identity / Quick Tagline */}

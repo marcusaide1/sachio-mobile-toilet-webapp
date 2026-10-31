@@ -34,7 +34,7 @@ export default function ProductsPage({
   });
 
   return (
-    <div className="pt-24 md:pt-28 pb-20 bg-[#f8f9fa]">
+    <div className="pt-[64px] md:pt-[144px] pb-20 bg-[#f8f9fa]">
       {/* Product Detail Modal */}
       {selectedProduct && (
         <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">

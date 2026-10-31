@@ -153,9 +153,9 @@ export default function FloatingWidgets({
       </div>
 
       {/* 2. Floating Bottom Right "Leave a Message" Tab with Pulsing Waves */}
-      <div className="fixed bottom-20 sm:bottom-4 right-4 z-40">
+      <div className="fixed bottom-[84px] right-3 left-3 sm:left-auto sm:right-4 sm:bottom-4 z-40 flex justify-end">
         {drawerOpen ? (
-          <div className="bg-white shadow-2xl border-t-4 border-[#0d2d4e] w-80 sm:w-96 p-5 relative animate-scaleUp">
+          <div className="bg-white shadow-2xl border-t-4 border-[#0d2d4e] w-full sm:w-96 max-h-[calc(100vh-160px)] overflow-y-auto p-4 sm:p-5 relative animate-scaleUp ml-auto">
             <button
               onClick={() => setDrawerOpen(false)}
               className="absolute right-3 top-3 text-gray-400 hover:text-gray-700"
@@ -263,7 +263,7 @@ export default function FloatingWidgets({
       )}
 
       {/* 4. Bottom Mobile Navigation Bar (Mobile Viewports Only) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 py-1.5 px-3 flex items-center justify-around shadow-lg">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 py-1.5 px-2 flex items-center justify-around shadow-lg pb-[env(safe-area-inset-bottom)]">
         <button
           onClick={onNavigateHome}
           className="flex flex-col items-center text-gray-600 hover:text-[#7ed956]"
