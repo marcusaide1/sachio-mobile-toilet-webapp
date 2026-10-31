@@ -87,7 +87,10 @@ export default function ProductCategories({ onSelectCategory, onOpenQuoteModal }
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col items-center text-center">
+          <span className="mb-3 text-xs font-din font-bold text-[#7ed956] tracking-widest uppercase">
+            Category 06
+          </span>
           <button
             type="button"
             onClick={() => onOpenQuoteModal('Mobile Toilets')}
