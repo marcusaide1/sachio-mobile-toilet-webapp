@@ -66,11 +66,11 @@ export default function AboutSection({ onNavigateToAbout }) {
 
             {/* Descriptive Text */}
             <p className="text-sm text-gray-600 font-sans leading-relaxed mb-4">
-              <strong>Sachio Express</strong> is a professional manufacturer and global supplier specializing in steel structure buildings, modular construction, and prefabricated housing solutions. Headquartered at Ikota Shopping Complex, Ajah, Lagos, our team provides comprehensive support for customers across Nigeria and overseas, while our manufacturing partners and supply network support projects worldwide.
+              Sachio Group delivers premier portable sanitation services and modern modular construction solutions across Nigeria and global markets.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-500 font-sans leading-relaxed mb-8">
-              With a monthly production capacity of approximately 50,000 square meters of housing, we provide free design consultation, CAD drawings, project planning, structural analysis, and international container packaging for projects across the Americas, Europe, Africa, Australia, and Asia.
+              Sachio Mobile Toilets is Nigeria’s fastest-growing provider of portable restrooms and VIP luxury trailers, supporting corporate events, private celebrations, and large-scale construction sites.
             </p>
 
             {/* "More About" Button */}

@@ -4,7 +4,6 @@ import {
   Phone, 
   Mail, 
   MessageCircle, 
-  QrCode, 
   ChevronUp, 
   MessageSquare, 
   X, 
@@ -24,7 +23,6 @@ export default function FloatingWidgets({
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeContactHover, setActiveContactHover] = useState(false);
-  const [showWechatQr, setShowWechatQr] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerEmail, setDrawerEmail] = useState('');
   const [drawerPhone, setDrawerPhone] = useState('');
@@ -106,7 +104,6 @@ export default function FloatingWidgets({
         onMouseEnter={() => setActiveContactHover(true)}
         onMouseLeave={() => {
           setActiveContactHover(false);
-          setShowWechatQr(false);
         }}
       >
         {/* Phone 1 */}
@@ -153,26 +150,10 @@ export default function FloatingWidgets({
           </span>
         </div>
 
-        {/* WeChat QR Code Hover */}
-        <div 
-          className="relative group flex items-center justify-end"
-          onMouseEnter={() => setShowWechatQr(true)}
-          onMouseLeave={() => setShowWechatQr(false)}
-        >
-          <div className="w-12 h-12 bg-[#0d2d4e] hover:bg-[#7ed956] text-white hover:text-[#002245] flex items-center justify-center transition-colors cursor-pointer">
-            <QrCode className="w-5 h-5" />
-          </div>
-          {showWechatQr && (
-            <div className="absolute right-14 bg-white text-gray-800 p-3 shadow-2xl border border-gray-200 text-center w-36 animate-fadeIn">
-              <span className="text-[11px] font-din uppercase font-bold text-gray-700 block mb-1">Scan WeChat:</span>
-              <img src={COMPANY_INFO.wechatQr} alt="WeChat QR Code" className="w-28 h-28 mx-auto object-contain" />
-            </div>
-          )}
-        </div>
       </div>
 
       {/* 2. Floating Bottom Right "Leave a Message" Tab with Pulsing Waves */}
-      <div className="fixed bottom-4 right-4 z-40">
+      <div className="fixed bottom-20 sm:bottom-4 right-4 z-40">
         {drawerOpen ? (
           <div className="bg-white shadow-2xl border-t-4 border-[#0d2d4e] w-80 sm:w-96 p-5 relative animate-scaleUp">
             <button
@@ -230,7 +211,7 @@ export default function FloatingWidgets({
         ) : (
           <div 
             onClick={() => setDrawerOpen(true)}
-            className="relative cursor-pointer flex items-center bg-[#0d2d4e] text-white pl-4 pr-5 py-2.5 rounded-full shadow-2xl hover:bg-[#002245] transition group border border-white/20"
+            className="relative cursor-pointer flex items-center justify-center bg-[#0d2d4e] text-white w-12 h-12 sm:w-auto sm:h-auto sm:pl-4 sm:pr-5 sm:py-2.5 rounded-full shadow-2xl hover:bg-[#002245] transition group border border-white/20"
           >
             {/* Pulsing Concentric Circles behind icon */}
             <div className="relative w-7 h-7 mr-2 flex items-center justify-center">
@@ -240,7 +221,7 @@ export default function FloatingWidgets({
                 <MessageSquare className="w-3.5 h-3.5" />
               </div>
             </div>
-            <span className="font-din text-xs uppercase font-bold tracking-wider">
+            <span className="hidden sm:inline font-din text-xs uppercase font-bold tracking-wider">
               Leave A Message
             </span>
           </div>
@@ -251,7 +232,7 @@ export default function FloatingWidgets({
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-16 sm:bottom-20 right-4 z-30 w-11 h-11 bg-white hover:bg-[#7ed956] text-[#002245] hover:text-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center transition group"
+          className="fixed bottom-32 sm:bottom-20 right-4 z-30 w-11 h-11 bg-white hover:bg-[#7ed956] text-[#002245] hover:text-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center transition group"
           title="Back to Top"
           aria-label="Back to Top"
         >

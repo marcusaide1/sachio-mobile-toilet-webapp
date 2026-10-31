@@ -14,7 +14,6 @@ export const COMPANY_INFO = {
   email: "sachiomobiletoilets@gmail.com",
   whatsapp: "08187692998",
   whatsappUrl: "https://api.whatsapp.com/send?phone=2348187692998&text=Hello%20Sachio%20Express,%20I%20am%20interested%20in%20your%20products",
-  wechatQr: "https://www.topinduscabin.com/storage/uploads/images/202209/28/1664374900_GDOjxU2RR0.png",
   socials: {
     facebook: "https://m.facebook.com/naijaportapotty/",
     instagram: "https://www.instagram.com/sachiomobiletoilets/",

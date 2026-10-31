@@ -50,7 +50,7 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
   };
 
   return (
-    <footer className="bg-[#002245] text-white pt-12 pb-16 md:pb-8 relative overflow-hidden">
+    <footer className="bg-[#002245] text-white pt-12 pb-24 sm:pb-20 md:pb-8 relative overflow-hidden z-[20]">
       {/* 1. Top Callout Action Bar (Need Help, Call Us, Newsletter) */}
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8 mb-12">
         <div className="bg-white/5 border border-white/10 rounded-none p-6 md:p-8">
@@ -207,11 +207,11 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
           </div>
 
           {/* Col 4: Logo & Socials (2 cols) */}
-          <div className="lg:col-span-2 text-left lg:text-right">
+          <div className="lg:col-span-2 text-left lg:text-right isolate">
             <div className="inline-block bg-[#002245] p-2 mb-4">
               <img src={COMPANY_INFO.logo} alt={COMPANY_INFO.name} className="h-10 w-auto object-contain" />
             </div>
-            <div className="flex items-center lg:justify-end space-x-2">
+            <div className="flex items-center lg:justify-end gap-2 mb-5">
               <a href={COMPANY_INFO.socials.facebook} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
                 <span className="font-bold text-xs">f</span>
               </a>
@@ -222,11 +222,11 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
                 <span className="font-bold text-xs">X</span>
               </a>
             </div>
-            <div className="mt-5 space-y-2">
+            <div className="space-y-3 clear-both">
               <a
                 href="/downloads/sachio-express.apk"
                 download
-                className="w-full max-w-[220px] lg:ml-auto flex items-center gap-3 rounded-none border border-white/20 bg-white/5 px-3 py-2 text-left hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] transition"
+                className="w-full max-w-[220px] mx-0 lg:ml-auto lg:mx-0 flex items-center gap-3 rounded-none border border-white/20 bg-white/5 px-3 py-2.5 text-left hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] transition"
                 aria-label="Download Sachio Express Android app"
               >
                 <Smartphone className="w-5 h-5 flex-shrink-0 text-[#7ed956]" />
@@ -237,7 +237,7 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
                 <Download className="w-4 h-4 ml-auto flex-shrink-0" />
               </a>
               <div
-                className="w-full max-w-[220px] lg:ml-auto flex items-center gap-3 rounded-none border border-white/10 bg-white/[0.03] px-3 py-2 text-left text-gray-400"
+                className="w-full max-w-[220px] mx-0 lg:ml-auto lg:mx-0 flex items-center gap-3 rounded-none border border-white/10 bg-white/[0.03] px-3 py-2.5 text-left text-gray-400"
                 aria-label="Sachio Express iOS app coming soon"
               >
                 <Smartphone className="w-5 h-5 flex-shrink-0" />
