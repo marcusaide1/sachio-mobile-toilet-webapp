@@ -3,7 +3,7 @@ import React from 'react';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { PRODUCT_CATEGORIES } from '../data/websiteData';
 
-export default function ProductCategories({ onSelectCategory }) {
+export default function ProductCategories({ onSelectCategory, onOpenQuoteModal }) {
   return (
     <section id="categories-section" className="py-16 md:py-24 bg-[#f7f7f7] relative">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
@@ -76,6 +76,16 @@ export default function ProductCategories({ onSelectCategory }) {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => onOpenQuoteModal('Mobile Toilets')}
+            className="w-full sm:w-auto bg-[#7ed956] hover:bg-[#002245] text-[#002245] hover:text-white px-8 py-4 font-din font-bold uppercase text-sm sm:text-base tracking-wider shadow-lg transition-colors duration-300"
+          >
+            Book Mobile Toilets
+          </button>
         </div>
       </div>
     </section>

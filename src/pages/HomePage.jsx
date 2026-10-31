@@ -24,6 +24,7 @@ export default function HomePage({
       {/* 2. Product Categories Grid */}
       <ProductCategories
         onSelectCategory={onSelectCategory}
+        onOpenQuoteModal={onOpenQuoteModal}
       />
 
       {/* 3. About Us Section with 15-year Image Mask & Video */}
