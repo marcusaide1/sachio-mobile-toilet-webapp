@@ -5,7 +5,6 @@ import {
   Mail, 
   MapPin, 
   MessageCircle, 
-  QrCode, 
   Send, 
   CheckCircle2, 
   AlertCircle, 
@@ -79,8 +78,8 @@ export default function ContactPage() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        {/* Top 4 Contact Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* Top Contact Info Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* Card 1: Address */}
           <div className="bg-white p-6 border border-gray-200 shadow-sm text-center">
             <div className="w-12 h-12 rounded-full bg-[#002245] text-[#7ed956] flex items-center justify-center mx-auto mb-4">
@@ -118,15 +117,6 @@ export default function ContactPage() {
                 Email: <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#002245] font-bold hover:underline">{COMPANY_INFO.email}</a>
               </p>
             </div>
-          </div>
-
-          {/* Card 4: WeChat QR */}
-          <div className="bg-white p-6 border border-gray-200 shadow-sm text-center">
-            <div className="w-12 h-12 rounded-full bg-[#002245] text-[#7ed956] flex items-center justify-center mx-auto mb-2">
-              <QrCode className="w-6 h-6" />
-            </div>
-            <h4 className="font-din text-lg font-bold text-[#002245] uppercase mb-1">Scan WeChat</h4>
-            <img src={COMPANY_INFO.wechatQr} alt="WeChat QR Code" className="w-20 h-20 mx-auto object-contain" />
           </div>
         </div>
 
@@ -243,13 +233,13 @@ export default function ContactPage() {
               <div className="w-full h-64 bg-gray-200 relative overflow-hidden flex items-center justify-center border border-gray-300">
                 <iframe
                   title="Sachio Express Location Map"
-                  src="https://maps.google.com/maps?q=Xiamen%20Xiang'an%20Fujian%20China&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Ikota%20Shopping%20Complex%2C%20Ajah%2C%20Lagos&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   className="w-full h-full border-none"
                   loading="lazy"
                 ></iframe>
               </div>
               <p className="text-[11px] text-gray-500 font-sans mt-2">
-                Xiang'an District, Xiamen, Fujian Province, China (Near Xiamen International Port).
+                Ikota Shopping Complex, Ajah, Lagos.
               </p>
             </div>
 

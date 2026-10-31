@@ -89,7 +89,7 @@ export default function QuoteModal({ isOpen, onClose, defaultProduct = '' }) {
           <div className="hidden md:block md:col-span-5 bg-[#002245] relative overflow-hidden text-white">
             <img
               src="https://www.topinduscabin.com/storage/uploads/images/202604/23/1776940075_ofNLvpgxoO.png"
-              alt="TOPINDUS Container Cabin"
+              alt="Sachio Express Container Cabin"
               className="absolute inset-0 w-full h-full object-cover opacity-35"
             />
             <div className="relative z-10 p-8 h-full flex flex-col justify-between">
@@ -98,7 +98,7 @@ export default function QuoteModal({ isOpen, onClose, defaultProduct = '' }) {
                   Direct Factory Quote
                 </span>
                 <h3 className="text-2xl font-din font-bold uppercase leading-tight mb-3">
-                  TOPINDUS Modular Engineering
+                  Sachio Express Modular Engineering
                 </h3>
                 <p className="text-xs text-gray-300 font-sans leading-relaxed">
                   Get fast CAD layout consultation, structural pricing, export packing schedules, and shipping cost estimates directly from our factory engineers.

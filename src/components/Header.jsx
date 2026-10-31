@@ -140,7 +140,7 @@ export default function Header({
                 <a 
                   href={`mailto:${COMPANY_INFO.email}`} 
                   className="flex items-center space-x-2 text-gray-200 hover:text-[#7ed956] transition"
-                  title="Email Topindus"
+                  title="Email Sachio Express"
                 >
                   <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[#7ed956]">
                     <Mail className="w-3.5 h-3.5" />
@@ -157,14 +157,11 @@ export default function Header({
                 <a href={COMPANY_INFO.socials.facebook} target="_blank" rel="noreferrer" className="w-7 h-7 rounded flex items-center justify-center border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] transition" title="Facebook">
                   <span className="font-bold text-xs">f</span>
                 </a>
-                <a href={COMPANY_INFO.socials.linkedin} target="_blank" rel="noreferrer" className="w-7 h-7 rounded flex items-center justify-center border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] transition" title="LinkedIn">
-                  <span className="font-bold text-xs">in</span>
+                <a href={COMPANY_INFO.socials.instagram} target="_blank" rel="noreferrer" className="w-7 h-7 rounded flex items-center justify-center border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] transition" title="Instagram">
+                  <span className="font-bold text-xs">ig</span>
                 </a>
-                <a href={COMPANY_INFO.socials.youtube} target="_blank" rel="noreferrer" className="w-7 h-7 rounded flex items-center justify-center border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] transition" title="YouTube">
-                  <span className="font-bold text-xs">▶</span>
-                </a>
-                <a href={COMPANY_INFO.socials.tiktok} target="_blank" rel="noreferrer" className="w-7 h-7 rounded flex items-center justify-center border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] transition" title="TikTok">
-                  <span className="font-bold text-xs">tk</span>
+                <a href={COMPANY_INFO.socials.twitter} target="_blank" rel="noreferrer" className="w-7 h-7 rounded flex items-center justify-center border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] transition" title="Twitter">
+                  <span className="font-bold text-xs">X</span>
                 </a>
               </div>
 

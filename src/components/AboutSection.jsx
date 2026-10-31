@@ -66,7 +66,7 @@ export default function AboutSection({ onNavigateToAbout }) {
 
             {/* Descriptive Text */}
             <p className="text-sm text-gray-600 font-sans leading-relaxed mb-4">
-              <strong>Sachio Express</strong> is a professional manufacturer and global supplier specializing in steel structure buildings, modular construction, and prefabricated housing solutions. Headquartered in Xiamen, China, our international trade team provides comprehensive support for overseas customers, while our manufacturing facilities located in Quanzhou, Fujian and Weifang, Shandong cover more than 10,000 square meters with over 200 skilled employees.
+              <strong>Sachio Express</strong> is a professional manufacturer and global supplier specializing in steel structure buildings, modular construction, and prefabricated housing solutions. Headquartered at Ikota Shopping Complex, Ajah, Lagos, our team provides comprehensive support for customers across Nigeria and overseas, while our manufacturing partners and supply network support projects worldwide.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-500 font-sans leading-relaxed mb-8">

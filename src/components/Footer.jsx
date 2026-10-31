@@ -9,7 +9,9 @@ import {
   HelpCircle, 
   CheckCircle2, 
   ShieldCheck, 
-  Globe 
+  Globe,
+  Download,
+  Smartphone
 } from 'lucide-react';
 import { COMPANY_INFO, HOT_TAGS } from '../data/websiteData';
 
@@ -39,7 +41,7 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
         setNewsletterMsg(data.msg || 'Already subscribed');
       }
     } catch (err) {
-      setNewsletterMsg('Subscribed to TOPINDUS newsletters!');
+      setNewsletterMsg('Subscribed to Sachio Express newsletters!');
       setNewsletterEmail('');
     } finally {
       setNewsletterLoading(false);
@@ -183,7 +185,6 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
               <button onClick={() => onNavigate('news')} className="text-left hover:text-[#7ed956] py-0.5">News</button>
               <button onClick={() => onNavigate('about')} className="text-left hover:text-[#7ed956] py-0.5">Video</button>
               <button onClick={() => onNavigate('contact')} className="text-left hover:text-[#7ed956] py-0.5">Contact Us</button>
-              <button onClick={() => onNavigate('admin')} className="text-left text-[#7ed956] hover:underline py-0.5 font-bold">Admin Portal</button>
             </div>
           </div>
 
@@ -214,15 +215,38 @@ export default function Footer({ onOpenQuoteModal, onNavigate, onSelectTag }) {
               <a href={COMPANY_INFO.socials.facebook} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
                 <span className="font-bold text-xs">f</span>
               </a>
-              <a href={COMPANY_INFO.socials.linkedin} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
-                <span className="font-bold text-xs">in</span>
+              <a href={COMPANY_INFO.socials.instagram} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
+                <span className="font-bold text-xs">ig</span>
               </a>
-              <a href={COMPANY_INFO.socials.youtube} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
-                <span className="font-bold text-xs">▶</span>
+              <a href={COMPANY_INFO.socials.twitter} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
+                <span className="font-bold text-xs">X</span>
               </a>
-              <a href={COMPANY_INFO.socials.tiktok} target="_blank" rel="noreferrer" className="w-8 h-8 rounded border border-white/20 hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] flex items-center justify-center transition">
-                <span className="font-bold text-xs">tk</span>
+            </div>
+            <div className="mt-5 space-y-2">
+              <a
+                href="/downloads/sachio-express.apk"
+                download
+                className="w-full max-w-[220px] lg:ml-auto flex items-center gap-3 rounded-none border border-white/20 bg-white/5 px-3 py-2 text-left hover:border-[#7ed956] hover:bg-[#7ed956] hover:text-[#002245] transition"
+                aria-label="Download Sachio Express Android app"
+              >
+                <Smartphone className="w-5 h-5 flex-shrink-0 text-[#7ed956]" />
+                <span>
+                  <span className="block text-[9px] uppercase tracking-widest opacity-70">Download for</span>
+                  <span className="block font-din font-bold text-sm uppercase">Android</span>
+                </span>
+                <Download className="w-4 h-4 ml-auto flex-shrink-0" />
               </a>
+              <div
+                className="w-full max-w-[220px] lg:ml-auto flex items-center gap-3 rounded-none border border-white/10 bg-white/[0.03] px-3 py-2 text-left text-gray-400"
+                aria-label="Sachio Express iOS app coming soon"
+              >
+                <Smartphone className="w-5 h-5 flex-shrink-0" />
+                <span>
+                  <span className="block text-[9px] uppercase tracking-widest opacity-70">Download for</span>
+                  <span className="block font-din font-bold text-sm uppercase">iOS</span>
+                </span>
+                <span className="ml-auto text-[9px] uppercase text-[#7ed956]">Coming Soon</span>
+              </div>
             </div>
           </div>
 

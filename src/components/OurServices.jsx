@@ -22,11 +22,11 @@ export default function OurServices() {
           </h2>
           <div className="w-14 h-1 bg-[#7ed956] mx-auto mt-4 mb-3"></div>
           <p className="text-xs sm:text-sm text-gray-300 max-w-xl mx-auto font-sans">
-            End-to-end engineering support, customized architectural drafting, global certifications, and round-the-clock technical service.
+            End-to-end engineering support, customized architectural drafting, quality assurance, and round-the-clock technical service.
           </p>
         </div>
 
-        {/* 6-Card Grid inside Glassmorphism Frame */}
+        {/* Service Card Grid inside Glassmorphism Frame */}
         <div className="bg-[#002245]/70 backdrop-blur-md border border-white/10 shadow-2xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
             {SERVICES.map((service, index) => (

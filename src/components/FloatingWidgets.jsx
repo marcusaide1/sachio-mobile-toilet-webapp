@@ -114,7 +114,7 @@ export default function FloatingWidgets({
           <a
             href={`tel:${COMPANY_INFO.hotline1}`}
             className="w-12 h-12 bg-[#0d2d4e] hover:bg-[#7ed956] text-white hover:text-[#002245] flex items-center justify-center transition-colors border-b border-white/10"
-            title="Call Topindus"
+            title="Call Sachio Express"
           >
             <Phone className="w-5 h-5" />
           </a>
@@ -128,7 +128,7 @@ export default function FloatingWidgets({
           <a
             href={`mailto:${COMPANY_INFO.email}`}
             className="w-12 h-12 bg-[#0d2d4e] hover:bg-[#7ed956] text-white hover:text-[#002245] flex items-center justify-center transition-colors border-b border-white/10"
-            title="Email Topindus"
+            title="Email Sachio Express"
           >
             <Mail className="w-5 h-5" />
           </a>

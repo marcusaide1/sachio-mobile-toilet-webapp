@@ -4,23 +4,21 @@
 export const COMPANY_INFO = {
   name: "Sachio Express",
   shortName: "Sachio Express",
-  logo: "https://www.topinduscabin.com/storage/uploads/images/202407/04/1720072035_dzJiXxFXaq.png",
+  logo: "/assets/sachio-logo.jpg",
   slogan: "Professional Portable Products Manufacturer",
   description: "Sachio Express has been successfully creating and distributing innovative, high quality portable container houses, portable toilets, tents, cooler boxes etc around the world for over 15 years.",
-  address: "801-9 Unit, No 837 Lianting Road, Xiang'an District, Xiamen, Fujian Province, China",
+  address: "Ikota shopping complex, Ajah, Lagos",
   factories: "Manufacturing facilities located in Quanzhou, Fujian and Weifang, Shandong covering more than 10,000 square meters with over 200 skilled employees.",
-  hotline1: "+86 15959387358",
-  hotline2: "+86 5923388958",
-  email: "sales1@sachioexpress.com",
-  whatsapp: "+86 15959387358",
-  whatsappUrl: "https://api.whatsapp.com/send?phone=+8615959387358&text=Hello%20Sachio%20Express,%20I%20am%20interested%20in%20your%20products",
+  hotline1: "08187692998",
+  hotline2: "08187692998",
+  email: "sachiomobiletoilets@gmail.com",
+  whatsapp: "08187692998",
+  whatsappUrl: "https://api.whatsapp.com/send?phone=2348187692998&text=Hello%20Sachio%20Express,%20I%20am%20interested%20in%20your%20products",
   wechatQr: "https://www.topinduscabin.com/storage/uploads/images/202209/28/1664374900_GDOjxU2RR0.png",
   socials: {
-    facebook: "https://www.facebook.com/profile.php?id=61588789251748",
-    tiktok: "https://www.tiktok.com/@topindus_",
-    linkedin: "https://cn.linkedin.com/company/topindus",
-    youtube: "https://www.youtube.com/@LeoXu-bz7yd",
-    instagram: "https://www.instagram.com/topindus4"
+    facebook: "https://m.facebook.com/naijaportapotty/",
+    instagram: "https://www.instagram.com/sachiomobiletoilets/",
+    twitter: "https://x.com/mobiletoiletsng?t=NBrUl7CeREOOeKpX-WamJg&s=09"
   }
 };
 
@@ -184,12 +182,6 @@ export const SERVICES = [
     icon: 'https://www.topinduscabin.com/storage/uploads/images/202209/22/1663833897_DHwKIOtCs2.png',
     title: 'Customization',
     desc: 'Sachio Express can customize according to customers\' drawings, site constraints, and requests.'
-  },
-  {
-    id: 3,
-    icon: 'https://www.topinduscabin.com/storage/uploads/images/202209/22/1663833918_RZdR5UP58G.png',
-    title: 'ISO Certificate',
-    desc: 'Certified quality standards: ISO 9001, ISO 14001 & ISO 45001.'
   },
   {
     id: 4,
