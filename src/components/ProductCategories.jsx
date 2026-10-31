@@ -4,17 +4,13 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import { PRODUCT_CATEGORIES } from '../data/websiteData';
 import toiletImage1 from '../../assets/recirculating-mobile-toilet-1.jpg';
 import toiletImage2 from '../../assets/recirculating-mobile-toilet-2.jpg';
-import toiletImage3 from '../../assets/recirculating-mobile-toilet-3.jpg';
 import toiletImage4 from '../../assets/recirculating-mobile-toilet-4.jpg';
-import toiletImage5 from '../../assets/recirculating-mobile-toilet-5.jpg';
 
 export default function ProductCategories({ onSelectCategory, onOpenQuoteModal }) {
   const toiletImages = [
     toiletImage1,
     toiletImage2,
-    toiletImage3,
-    toiletImage4,
-    toiletImage5
+    toiletImage4
   ];
 
   return (
