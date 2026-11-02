@@ -20,8 +20,8 @@ export default function ProductCategories({ onSelectCategory }) {
           </p>
         </div>
 
-        {/* Categories Grid (5 Cards) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
           {PRODUCT_CATEGORIES.map((cat) => (
             <div
               key={cat.id}

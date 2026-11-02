@@ -1,5 +1,6 @@
 // src/data/websiteData.js
 // Complete dataset representing Sachio Express
+import mobileToiletHireImage from '../../assets/recirculating-mobile-toilet-1.jpg';
 
 export const COMPANY_INFO = {
   name: "Sachio Express",
@@ -139,6 +140,18 @@ export const PRODUCT_CATEGORIES = [
       { name: 'Mobile Food Trailer', slug: 'mobile-food-trailer' },
       { name: 'Mobile Trailer House', slug: 'mobile-trailer-house' }
     ]
+  },
+  {
+    id: 'mobile-toilet-hire',
+    num: '06',
+    title: 'Mobile Toilet Hire',
+    desc: 'Executive recirculating flushing toilets for weddings, concerts, construction sites, and outdoor events.',
+    image: mobileToiletHireImage,
+    subcategories: [
+      { name: 'Recirculating Mobile Toilet Hire', slug: 'recirculating-mobile-toilet-hire' },
+      { name: 'Event Toilet Hire', slug: 'event-toilet-hire' },
+      { name: 'Portable Toilet Hire', slug: 'portable-toilet-hire' }
+    ]
   }
 ];
 
@@ -260,6 +273,17 @@ export const SHOWCASE_PROJECTS = [
 ];
 
 export const ALL_PRODUCTS = [
+  {
+    id: 'recirculating-mobile-toilet-hire',
+    name: 'Executive Recirculating Mobile Toilet Hire',
+    category: 'Mobile Toilet Hire',
+    subCategory: 'Recirculating Mobile Toilet Hire',
+    image: mobileToiletHireImage,
+    features: ['Chemical Recirculating Flush', 'Internal Holding Tank', 'Suitable for Weddings and Outdoor Events'],
+    dimensions: 'Standard executive mobile toilet unit',
+    structure: 'Durable molded HDPE body with recirculating flushing system',
+    lifespan: 'Available for short-term and long-term hire'
+  },
   {
     id: 'expandable-20ft',
     name: '20ft Two-Wing Expandable Container House',
