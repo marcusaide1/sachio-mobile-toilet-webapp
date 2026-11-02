@@ -337,7 +337,6 @@ export const ALL_PRODUCTS = [
       tptM02DoorView,
       tptM02InteriorView
     ],
-    price: '₦6,450,000.00',
     features: [
       '65-litre hand washing sink',
       '75-litre toilet flushing sink',
