@@ -1,5 +1,6 @@
 // src/data/websiteData.js
 // Complete dataset representing Sachio Express
+import sachioLogo from '../../assets/sachio-logo.jpg';
 import mobileToiletHireImage from '../../assets/recirculating-mobile-toilet-1.jpg';
 import tptM02FrontImage from '../../assets/tpt-m02-front.jpg';
 import tptM02OpenImage from '../../assets/tpt-m02-open.jpg';
@@ -12,7 +13,7 @@ import tptM02InteriorView from '../../assets/tpt-m02-interior-view.jpg';
 export const COMPANY_INFO = {
   name: "Sachio Express",
   shortName: "Sachio Express",
-  logo: "./assets/sachio-logo.jpg",
+  logo: sachioLogo,
   slogan: "Professional Portable Products Manufacturer",
   description: "Sachio Express has been successfully creating and distributing innovative, high quality portable container houses, portable toilets, tents, cooler boxes etc around the world for over 15 years.",
   address: "Ikota shopping complex, Ajah, Lagos",
