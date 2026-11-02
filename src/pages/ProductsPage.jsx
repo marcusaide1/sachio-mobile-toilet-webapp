@@ -47,13 +47,26 @@ export default function ProductsPage({
               <X className="w-5 h-5" />
             </button>
 
-            <div className="h-64 sm:h-80 overflow-hidden bg-gray-100">
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {selectedProduct.gallery ? (
+              <div className="grid grid-cols-2 gap-2 h-64 sm:h-80 bg-gray-100 p-2">
+                {selectedProduct.gallery.map((image, index) => (
+                  <img
+                    key={image}
+                    src={image}
+                    alt={`${selectedProduct.name} view ${index + 1}`}
+                    className="w-full h-full object-contain bg-white"
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="h-64 sm:h-80 overflow-hidden bg-gray-100">
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
 
             <div className="p-6 sm:p-8">
               <span className="bg-[#002245] text-[#7ed956] text-xs font-din font-bold uppercase tracking-wider px-3 py-1 inline-block mb-2">
@@ -62,6 +75,11 @@ export default function ProductsPage({
               <h2 className="text-2xl font-din font-bold text-[#002245] uppercase mb-4">
                 {selectedProduct.name}
               </h2>
+              {selectedProduct.price && (
+                <p className="text-xl sm:text-2xl font-din font-bold text-[#7ed956] mb-4">
+                  {selectedProduct.price}
+                </p>
+              )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-gray-50 p-4 border border-gray-200 mb-6 text-xs font-sans">
                 <div>
@@ -76,6 +94,48 @@ export default function ProductsPage({
                   <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Structure & Framing:</strong>
                   <span>{selectedProduct.structure}</span>
                 </div>
+                {selectedProduct.innerHeight && (
+                  <div>
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Inner Height:</strong>
+                    <span>{selectedProduct.innerHeight}</span>
+                  </div>
+                )}
+                {selectedProduct.weight && (
+                  <div>
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Weight:</strong>
+                    <span>{selectedProduct.weight}</span>
+                  </div>
+                )}
+                {selectedProduct.wasteTank && (
+                  <div>
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Waste Tank:</strong>
+                    <span>{selectedProduct.wasteTank}</span>
+                  </div>
+                )}
+                {selectedProduct.deliveryTime && (
+                  <div>
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Delivery Time:</strong>
+                    <span>{selectedProduct.deliveryTime}</span>
+                  </div>
+                )}
+                {selectedProduct.minimumOrder && (
+                  <div>
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Minimum Order:</strong>
+                    <span>{selectedProduct.minimumOrder}</span>
+                  </div>
+                )}
+                {selectedProduct.supplyCapacity && (
+                  <div>
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Supply Capacity:</strong>
+                    <span>{selectedProduct.supplyCapacity}</span>
+                  </div>
+                )}
+                {selectedProduct.warranty && (
+                  <div className="sm:col-span-2">
+                    <strong className="block text-gray-700 font-din uppercase text-xs mb-0.5">Warranty:</strong>
+                    <span>{selectedProduct.warranty}</span>
+                  </div>
+                )}
               </div>
 
               <div className="mb-6">
@@ -215,6 +275,11 @@ export default function ProductsPage({
                     >
                       {prod.name}
                     </h3>
+                    {prod.price && (
+                      <p className="text-lg font-din font-bold text-[#7ed956] mb-3">
+                        {prod.price}
+                      </p>
+                    )}
 
                     {/* Quick Specs */}
                     <div className="space-y-1.5 text-[11px] text-gray-600 font-sans bg-gray-50 p-2.5 border border-gray-100 mb-3">

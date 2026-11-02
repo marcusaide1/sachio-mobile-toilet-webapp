@@ -1,6 +1,13 @@
 // src/data/websiteData.js
 // Complete dataset representing Sachio Express
 import mobileToiletHireImage from '../../assets/recirculating-mobile-toilet-1.jpg';
+import tptM02FrontImage from '../../assets/tpt-m02-front.jpg';
+import tptM02OpenImage from '../../assets/tpt-m02-open.jpg';
+import sachioPortableToiletImage from '../../assets/sachio-mobile-portable-toilet.jpg';
+import campingMobileToiletImage from '../../assets/20l-camping-mobile-toilet.jpg';
+import tptM02SideView from '../../assets/tpt-m02-side-view.jpg';
+import tptM02DoorView from '../../assets/tpt-m02-door-view.jpg';
+import tptM02InteriorView from '../../assets/tpt-m02-interior-view.jpg';
 
 export const COMPANY_INFO = {
   name: "Sachio Express",
@@ -273,6 +280,77 @@ export const SHOWCASE_PROJECTS = [
 ];
 
 export const ALL_PRODUCTS = [
+  {
+    id: '20l-camping-mobile-toilet',
+    name: '20L Camping Mobile Toilet',
+    category: 'Mobile Toilet Hire',
+    subCategory: 'Camping Toilet',
+    brand: 'Sachio Mobile Portable Toilets',
+    image: campingMobileToiletImage,
+    features: [
+      '20-litre waste tank',
+      '12-litre fresh water tank',
+      'Built-in pump',
+      'Leak-proof sealing slide valve',
+      'Odourless design'
+    ],
+    dimensions: '20 litre portable camping toilet',
+    structure: 'Portable plastic camping toilet',
+    lifespan: 'Multi-purpose camping and outdoor use'
+  },
+  {
+    id: 'sachio-mobile-portable-toilet',
+    name: 'Sachio Mobile Portable Toilet',
+    category: 'Mobile Toilet Hire',
+    subCategory: 'HDPE Portable Toilet',
+    brand: 'Sachio Mobile Portable Toilets',
+    image: sachioPortableToiletImage,
+    features: [
+      'Mirror, doorknob, hook, paper holder and lock',
+      'Optional light, air fan, exhaust fan and solar light',
+      '190-litre waste tank',
+      'Delivery time: 50 days',
+      'Minimum order: 2 units',
+      'Supply capacity: 500 units per month'
+    ],
+    dimensions: '100 x 100 x 230 cm',
+    innerHeight: '200 cm',
+    weight: '85 kg',
+    wasteTank: '190 L',
+    structure: 'HDPE',
+    warranty: '1 year for the pump and 6 years for the other parts',
+    deliveryTime: '50 days',
+    minimumOrder: '2 units',
+    supplyCapacity: '500 units/month',
+    lifespan: '6 years for the main parts'
+  },
+  {
+    id: 'tpt-m02-mobile-squat-toilet',
+    name: 'TPT-M02 Mobile Squat Toilet',
+    category: 'Mobile Toilet Hire',
+    subCategory: 'Mobile Squat Toilet',
+    image: tptM02FrontImage,
+    gallery: [
+      tptM02FrontImage,
+      tptM02OpenImage,
+      tptM02SideView,
+      tptM02DoorView,
+      tptM02InteriorView
+    ],
+    price: '₦6,450,000.00',
+    features: [
+      '65-litre hand washing sink',
+      '75-litre toilet flushing sink',
+      '220-litre water tank',
+      'Mirror, doorknob, hook, paper holder, basin and lock',
+      'Optional soap dispenser, light, exhaust fan and solar light'
+    ],
+    dimensions: '1000 x 1000 x 2450 mm',
+    innerHeight: '1900 mm',
+    weight: '100 kg',
+    structure: 'HDPE',
+    lifespan: '10-15 Years'
+  },
   {
     id: 'recirculating-mobile-toilet-hire',
     name: 'Executive Recirculating Mobile Toilet Hire',
